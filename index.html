@@ -1,6 +1,6 @@
 <!doctype html><html lang="ru"><head><meta charset="utf-8"><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#3b4a5e">
-<title>Эверест консультант</title><link rel="icon" type="image/png" sizes="32x32" href="favicon-32-v4.png?v=d94b3e8"><link rel="icon" type="image/png" sizes="64x64" href="favicon-64-v4.png?v=d94b3e8"><link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-v4.png?v=d94b3e8"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Inter:wght@200;300;400&display=swap" rel="stylesheet"><link rel="manifest" href="manifest.webmanifest?v=d94b3e8">
+<title>Эверест консультант</title><link rel="icon" type="image/png" sizes="32x32" href="favicon-32-v4.png?v=9bd5111"><link rel="icon" type="image/png" sizes="64x64" href="favicon-64-v4.png?v=9bd5111"><link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-v4.png?v=9bd5111"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Inter:wght@200;300;400&display=swap" rel="stylesheet"><link rel="manifest" href="manifest.webmanifest?v=9bd5111">
 <meta name="apple-mobile-web-app-title" content="Эверест консультант"><meta name="apple-mobile-web-app-capable" content="yes">
 <style>
 :root{--bg:#eef1f5;--pan:#fff;--ink:#1e2834;--mut:#5d6b7c;--line:#d5dce5;--acc:#3b4a5e;--acc2:#56708f;--soft:#e3e9f0;--ok:#4f7a63;--bad:#9a4f4f;--warn:#8a6d2f;--warnbg:#f6efdc}
@@ -87,6 +87,44 @@ button:active:not(:disabled){transform:scale(.97);box-shadow:none;transition-dur
  nav#tabs button{flex-direction:row;font-size:14.5px;justify-content:flex-start;gap:10px;min-height:46px;padding:0 12px;border-radius:9px}nav#tabs button.on{background:var(--soft)}nav#tabs button i{font-size:18px;width:22px;text-align:center}nav#tabs button .bd{position:static;margin-left:auto}
  main{padding:18px 24px}#toast{bottom:24px}}
 #pin .plogo img{filter:none;-webkit-mask-image:radial-gradient(ellipse 62% 60% at 50% 52%,#000 72%,transparent 100%);mask-image:radial-gradient(ellipse 62% 60% at 50% 52%,#000 72%,transparent 100%)}header img{border-radius:7px}
+/* === тёмная тема рабочих страниц (как экран входа) === */
+@media screen{
+:root{--bg:#0B1426;--bg2:#132242;--gold:#D4AF5A;--gold2:#F3D98B;--pan:rgba(255,255,255,.05);--ink:#E8EDF5;--mut:#A3B0C4;--line:rgba(255,255,255,.12);--acc:#D4AF5A;--acc2:#D4AF5A;--soft:rgba(255,255,255,.08);--ok:#6FCF97;--bad:#F08A80;--warn:#F0B35B;--warnbg:rgba(240,179,91,.12);--ondark:#0B1426;color-scheme:dark}
+html{background:var(--bg)}
+body{min-height:100vh;background:radial-gradient(ellipse at 50% 0%,#1C2E52 0%,#132242 35%,#0B1426 85%) fixed;color:var(--ink)}
+header{background:linear-gradient(135deg,rgba(15,27,51,.94),rgba(28,46,82,.94));-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid rgba(212,175,90,.22);box-shadow:0 4px 18px rgba(0,0,0,.35)}
+header .t b{color:#F1F4FA}header .t span{color:var(--gold);opacity:1}#sync{color:#B9C4D6;opacity:1}
+.hb{border-color:rgba(212,175,90,.35);color:var(--ink)}@media(hover:hover){.hb:hover{background:rgba(212,175,90,.12);border-color:var(--gold)}}
+nav#tabs{background:rgba(11,20,38,.92);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-color:rgba(212,175,90,.18)}
+nav#tabs button{color:#A3B0C4}nav#tabs button.on{color:var(--gold)}nav#tabs button .bd{background:var(--gold);color:var(--ondark)}
+@media(min-width:1024px){nav#tabs button.on{background:rgba(212,175,90,.12);box-shadow:inset 3px 0 0 var(--gold)}nav#tabs button:hover:not(.on){background:rgba(255,255,255,.05)}}
+h2{color:#F1F4FA}h3{color:var(--gold)}
+.pan,.it{background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.025));border-color:rgba(212,175,90,.16);box-shadow:0 6px 20px rgba(0,0,0,.2);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.it>.hd:hover{background:rgba(212,175,90,.07)}.it>.bd{background:rgba(5,12,26,.35)}
+input,select,textarea,.ms>button{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.18);color:var(--ink)}
+input::placeholder,textarea::placeholder{color:#8593A8}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 2px rgba(212,175,90,.25)}
+select option,select optgroup{background:#132242;color:var(--ink)}
+input.err,select.err{border-color:var(--bad);background:rgba(240,138,128,.1)}input.wrn,input.unc,textarea.unc{border-color:var(--warn);background:var(--warnbg)}
+input[type=checkbox],input[type=radio]{accent-color:var(--gold);background:none}
+.btn{background:linear-gradient(180deg,#DDBB6A,#C9A24E);color:var(--ondark)}
+.btn.sec{background:rgba(255,255,255,.07);color:var(--ink);border:1px solid rgba(255,255,255,.16)}.btn.bad{background:rgba(240,138,128,.14);color:#FF9D93;border:1px solid rgba(240,138,128,.4)}
+@media(hover:hover){.btn:hover:not(:disabled){box-shadow:0 3px 12px rgba(0,0,0,.35)}}
+.bg{background:rgba(255,255,255,.1);color:#C3CEDD}.bg.b{background:rgba(120,165,230,.16);color:#A9C8F2}.bg.g{background:rgba(111,207,151,.15);color:#7FDCA2}.bg.r{background:rgba(240,138,128,.16);color:#FF9D93}.bg.y{background:rgba(240,179,91,.16);color:#F6C477}
+.fm.err{color:#FF9D93}.fm.wrn{color:#F6C477}
+.disc{background:rgba(212,175,90,.07);border-left-color:var(--gold);color:#B9C4D6}
+.ms>div{background:#132242;border-color:rgba(212,175,90,.3);box-shadow:0 10px 28px rgba(0,0,0,.5)}.ms label:hover{background:rgba(255,255,255,.06)}
+.tree{border-left-color:rgba(212,175,90,.25)}
+.iss{background:rgba(255,255,255,.04);border-color:var(--line)}.iss.low{border-left-color:#7FA8E0}
+.ans a,.src a{color:var(--gold2)}
+.prev{border-color:rgba(212,175,90,.25);background:#fff}
+.words{color:var(--gold2)}
+#toast{background:#1C2E52;color:var(--ink);border:1px solid rgba(212,175,90,.35);box-shadow:0 8px 24px rgba(0,0,0,.45)}
+#cf{background:rgba(5,10,20,.65)}#cf>div{background:#132242;color:var(--ink);border:1px solid rgba(212,175,90,.3);box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.drop{border-color:rgba(212,175,90,.4);color:var(--gold2)}.drop:hover{background:rgba(212,175,90,.07)}
+.empty,.sm{color:var(--mut)}
+::-webkit-scrollbar{width:10px;height:10px}::-webkit-scrollbar-thumb{background:rgba(255,255,255,.15);border-radius:6px}::-webkit-scrollbar-track{background:transparent}
+}
 </style></head><body>
 <div id="pin" style="display:none"><div class="pbg"><svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice">
 <g fill="none" stroke="#C9D3E4" stroke-opacity=".05" stroke-width="1">
@@ -101,8 +139,8 @@ button:active:not(:disabled){transform:scale(.97);box-shadow:none;transition-dur
 </g>
 <path fill="#C9D3E4" fill-opacity=".025" d="M0,900 L0,640 L180,520 L260,560 L420,380 L520,470 L640,300 L760,430 L850,390 L980,520 L1120,410 L1260,520 L1440,450 L1440,900Z"/>
 <path fill="#C9D3E4" fill-opacity=".02" d="M0,900 L0,760 L240,650 L380,720 L560,600 L700,700 L880,620 L1040,720 L1220,640 L1440,720 L1440,900Z"/>
-</svg></div><div class="wrap"><section class="brand"><div class="plogo"><img data-rm="consultant-logo-v4.svg?v=d94b3e8" src="consultant-logo-anim-v4.svg?v=d94b3e8" alt="Эверест консультант"><span class="shine"></span></div><div class="word">ЭВЕРЕСТ</div><div class="rule"></div><div class="sub">КОНСУЛЬТАНТ</div><div class="tag">Юридическая практика на высоте</div></section><section class="card"><div class="msg" id="pinm" aria-live="polite">Введите PIN</div><div class="dots" id="pind"><i></i><i></i><i></i><i></i></div><div class="kp" id="kp"><button>1</button><button>2</button><button>3</button><button>4</button><button>5</button><button>6</button><button>7</button><button>8</button><button>9</button><button class="x" data-k="key" aria-label="Войти по ключу"><svg viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l2 2M15 8l2 2"/></svg>КЛЮЧ</button><button>0</button><button class="x" data-k="del" aria-label="Стереть"><svg viewBox="0 0 24 24"><path d="M9 5h11v14H9l-6-7z"/><path d="M12.5 9.5l5 5M17.5 9.5l-5 5"/></svg></button></div><a href="#" id="pinkey">Войти по ключу GitHub</a><div class="foot"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Эверест Консалт · данные защищены</div></section></div></div>
-<header><img data-rm="consultant-logo-v4.svg?v=d94b3e8" src="consultant-logo-anim-v4.svg?v=d94b3e8" alt=""><div class="t"><b>Эверест</b><span>консультант</span></div><span id="sync"></span><button class="hb" id="rf" title="Обновить">⟳</button><button class="hb" id="more">Прочее</button></header><script>if(matchMedia("(prefers-reduced-motion: reduce)").matches)document.querySelectorAll("img[data-rm]").forEach(i=>i.src=i.dataset.rm)</script>
+</svg></div><div class="wrap"><section class="brand"><div class="plogo"><img data-rm="consultant-logo-v4.svg?v=9bd5111" src="consultant-logo-anim-v4.svg?v=9bd5111" alt="Эверест консультант"><span class="shine"></span></div><div class="word">ЭВЕРЕСТ</div><div class="rule"></div><div class="sub">КОНСУЛЬТАНТ</div><div class="tag">Юридическая практика на высоте</div></section><section class="card"><div class="msg" id="pinm" aria-live="polite">Введите PIN</div><div class="dots" id="pind"><i></i><i></i><i></i><i></i></div><div class="kp" id="kp"><button>1</button><button>2</button><button>3</button><button>4</button><button>5</button><button>6</button><button>7</button><button>8</button><button>9</button><button class="x" data-k="key" aria-label="Войти по ключу"><svg viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l2 2M15 8l2 2"/></svg>КЛЮЧ</button><button>0</button><button class="x" data-k="del" aria-label="Стереть"><svg viewBox="0 0 24 24"><path d="M9 5h11v14H9l-6-7z"/><path d="M12.5 9.5l5 5M17.5 9.5l-5 5"/></svg></button></div><a href="#" id="pinkey">Войти по ключу GitHub</a><div class="foot"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Эверест Консалт · данные защищены</div></section></div></div>
+<header><img data-rm="consultant-logo-v4.svg?v=9bd5111" src="consultant-logo-anim-v4.svg?v=9bd5111" alt=""><div class="t"><b>Эверест</b><span>консультант</span></div><span id="sync"></span><button class="hb" id="rf" title="Обновить">⟳</button><button class="hb" id="more">Прочее</button></header><script>if(matchMedia("(prefers-reduced-motion: reduce)").matches)document.querySelectorAll("img[data-rm]").forEach(i=>i.src=i.dataset.rm)</script>
 <nav id="tabs"><button data-v="docs" class="on"><i>📄</i>Документы</button><button data-v="cps"><i>👥</i>Контрагенты</button><button data-v="blanks"><i>🖋</i>Бланки</button><button data-v="reg"><i>🗂</i>Реестр</button><button data-v="rev"><i>🔍</i>Проверка</button><button data-v="ask"><i>💬</i>Консультант</button><button data-v="mail"><i>✉️</i>Почта<span class="bd" id="mailn" style="display:none"></span></button></nav>
 <main>
 <section class="v on" id="v-docs"><h2>Новый документ</h2><div class="pan" id="dform"></div><div id="dprev"></div></section>
@@ -113,7 +151,7 @@ button:active:not(:disabled){transform:scale(.97);box-shadow:none;transition-dur
 <section class="v" id="v-mail"><h2>Входящие</h2><div id="inl"></div><h2 style="margin-top:18px">Исходящие</h2><div class="pan" id="outf"></div><div id="outl"></div></section>
 <section class="v" id="v-blanks"><h2>Шаблоны/Бланки</h2><div id="blk"></div></section>
 <section class="v" id="v-more"><h2>Прочее</h2><div class="pan"><div class="sm" id="keyst"></div><label class="f">Ключ GitHub (если нет PIN)</label><input id="tok" type="password" autocomplete="off" placeholder="github_pat_…"><div class="bar"><button class="btn" id="toksave">Подключить</button><button class="btn sec" id="lock">Заблокировать</button></div></div>
-<div class="pan"><h3 style="margin-top:0">Запросы к боту</h3><div id="reql"></div></div><div class="pan sm">Версия: 2026-10-12 11:42 UTC · d94b3e8. Данные хранятся в закрытом репозитории, на устройстве — копия для работы без сети.</div></section>
+<div class="pan"><h3 style="margin-top:0">Запросы к боту</h3><div id="reql"></div></div><div class="pan sm">Версия: 2026-10-12 11:47 UTC · 9bd5111. Данные хранятся в закрытом репозитории, на устройстве — копия для работы без сети.</div></section>
 </main><div id="toast"></div><div id="cf"><div><div id="cft" style="margin-bottom:14px"></div><div class="bar" style="justify-content:flex-end"><button class="btn sec" id="cfn">Отмена</button><button class="btn" id="cfy">Да</button></div></div></div>
 <script>/* Общее надёжное хранилище для приложений на makc178.github.io (одно происхождение => общий localStorage с лимитом ~5 МБ).
    Ключи с префиксом приложения; дубль в IndexedDB; navigator.storage.persist(). Ничего не удаляет само. */
